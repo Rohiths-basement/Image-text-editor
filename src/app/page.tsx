@@ -11,6 +11,22 @@ import { decodeSharePayload } from '@/utils/share';
 import type { ShareDoc } from '@/editor/types';
 import { ensureGoogleFontLoaded } from '@/utils/fonts';
 
+// Narrow unknown to a v1 shareable document-like object without using 'any'
+function hasV1(x: unknown): x is { v: 1 } {
+  return (
+    typeof x === 'object' &&
+    x !== null &&
+    'v' in x &&
+    // Use a precise cast to avoid 'any'
+    (x as { v: unknown }).v === 1
+  );
+}
+
+type PersistApi = {
+  hasHydrated?: () => boolean;
+  onFinishHydration?: (fn: () => void) => () => void;
+};
+
 const EditorCanvas = dynamic(
   () => import('@/components/EditorCanvas').then((m) => m.EditorCanvas),
   { ssr: false }
@@ -38,7 +54,7 @@ export default function Home() {
       if (!match) return;
       const encoded = match[1];
       const doc = decodeSharePayload(encoded) as unknown;
-      if (doc && typeof doc === 'object' && (doc as any).v === 1) {
+      if (hasV1(doc)) {
         const candidate = doc as Partial<ShareDoc>;
         if (Array.isArray(candidate.layers)) {
           hydrateFromShare(candidate as ShareDoc);
@@ -48,7 +64,7 @@ export default function Home() {
         window.history.replaceState(null, '', base);
       }
     };
-    const api = (useEditor as any).persist;
+    const api = (useEditor as unknown as { persist?: PersistApi }).persist;
     if (api?.hasHydrated?.()) {
       run();
       return;

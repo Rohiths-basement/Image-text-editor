@@ -254,13 +254,12 @@ export const InspectorPanel: React.FC = () => {
       const family = file.name.replace(/\.[^/.]+$/, '');
       const fontFace = new FontFace(family, buf);
       await fontFace.load();
-      // @ts-ignore - TS may not know about document.fonts
-      document.fonts.add(fontFace);
+      ((document.fonts as { add: (font: FontFace) => void })?.add)?.(fontFace);
       setLoadedFonts(prev => new Set([...prev, family]));
       setFonts(prev => {
         if (prev.some(f => f.family === family)) return prev;
         return [
-          { family, variants: ['400', '700'], subsets: ['latin'], category: 'custom' as any },
+          { family, variants: ['400', '700'], subsets: ['latin'], category: 'custom' },
           ...prev,
         ];
       });

@@ -83,7 +83,7 @@ export const Toolbar: React.FC = () => {
       const animations: Array<() => Promise<void>> = [];
 
       let guidesShown = false;
-      selectedIds.forEach((id, idx) => {
+      selectedIds.forEach((id) => {
         const layer = layers.find((l) => l.id === id);
         if (!layer) return;
         const avoidRects = layers
