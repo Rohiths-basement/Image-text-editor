@@ -1,7 +1,7 @@
 # Image Text Composer
 
 
-[Live App]([https://image-text-editor-mocha.vercel.app](url)) (Hosted on Vercel)
+[Live App (Hosted on Vercel)]([url](https://image-text-editor-mocha.vercel.app))
 
 
 A powerful, desktop-only single-page image editing tool that enables users to upload PNG images and overlay them with fully customizable text. Built with Next.js, TypeScript, and react-konva for professional-grade text editing capabilities.
@@ -30,7 +30,7 @@ A powerful, desktop-only single-page image editing tool that enables users to up
 
 ## 🚀 Live Demo
 
-[View Live Demo]([[https://your-demo-url.vercel.app](https://www.loom.com/share/89fee883f06442bea0b57065b95d007f?sid=73a328db-99e5-4f75-8598-00b110546a2f)](url)) 
+[View Live Demo](https://www.loom.com/share/89fee883f06442bea0b57065b95d007f?sid=73a328db-99e5-4f75-8598-00b110546a2f))
 
 ## ✨ Features
 
