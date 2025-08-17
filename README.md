@@ -1,6 +1,8 @@
 # Image Text Composer
 
-[https://image-text-editor-mocha.vercel.app](url) - Live app (Hosted on Vercel)
+
+[Live App]([https://image-text-editor-mocha.vercel.app](url)) (Hosted on Vercel)
+
 
 A powerful, desktop-only single-page image editing tool that enables users to upload PNG images and overlay them with fully customizable text. Built with Next.js, TypeScript, and react-konva for professional-grade text editing capabilities.
 
@@ -15,7 +17,7 @@ A powerful, desktop-only single-page image editing tool that enables users to up
 
 ### Bonus + Advanced
 - Magic Place: smart auto-placement to high-contrast, low-clutter areas using saliency heatmap and contrast scoring, avoiding overlaps; animated move with a brief guide overlay
-- Shareable Links (no backend): state serialized, LZ-compressed in URL hash; hydration runs after autosave to avoid races; one-click copy from toolbar
+- Shareable Links (no backend): state serialized, LZ-compressed in URL hash; hydration runs after autosave to avoid races; one-click copy from toolbar (Paste it onto Safari for now because google chrome cuts off a pasted link that is very long. Copy from Chrome & paste the link into safari)
 - Auto Color picker - Showcases the colors that are already present in the image to the user so that they can choose those colors easily.
 - Curved Text (Arc Warp): radius, up/down direction, extra spacing; included in presets and persisted in share/autosave
 - Text Shadow: color, blur, offset X/Y
@@ -28,7 +30,7 @@ A powerful, desktop-only single-page image editing tool that enables users to up
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-demo-url.vercel.app) *(Deploy to get URL)*
+[View Live Demo]([[https://your-demo-url.vercel.app](https://www.loom.com/share/89fee883f06442bea0b57065b95d007f?sid=73a328db-99e5-4f75-8598-00b110546a2f)](url)) 
 
 ## ✨ Features
 
