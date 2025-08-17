@@ -1,6 +1,6 @@
 # Image Text Composer
 
-[Live App (Hosted On Vercel](https://image-text-editor-mocha.vercel.app)
+[Live App (Hosted On Vercel)](https://image-text-editor-mocha.vercel.app)
 
 
 
