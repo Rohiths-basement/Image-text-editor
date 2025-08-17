@@ -15,9 +15,10 @@ A powerful, desktop-only single-page image editing tool that enables users to up
 
 ### Bonus + Advanced
 - Magic Place: smart auto-placement to high-contrast, low-clutter areas using saliency heatmap and contrast scoring, avoiding overlaps; animated move with a brief guide overlay
+- Shareable Links (no backend): state serialized, LZ-compressed in URL hash; hydration runs after autosave to avoid races; one-click copy from toolbar
+- Auto Color picker - Showcases the colors that are already present in the image to the user so that they can choose those colors easily.
 - Curved Text (Arc Warp): radius, up/down direction, extra spacing; included in presets and persisted in share/autosave
 - Text Shadow: color, blur, offset X/Y
-- Shareable Links (no backend): state serialized, LZ-compressed in URL hash; hydration runs after autosave to avoid races; one-click copy from toolbar
 - Google Fonts Enhancements: API proxy with no-store and curated top latin fonts; dynamic font preloading for layers/presets and preview preloading in dropdown
 - Text Opacity control rendered on canvas and in Inspector
 - Multi-line editing UX: textarea overlay; Enter inserts newline; Cmd/Ctrl+Enter commits
